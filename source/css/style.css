@@ -4,13 +4,13 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: #fff;
+    background: #FAFAFA;
     z-index: 9999;
     text-align: center;
 }
 
 body {
-    background-color: #FDFDFD;
+    background-color: #FAFAFA;
     color: #000;
     font-family: monospace;
     margin: 0;
@@ -28,12 +28,12 @@ body.isFullscreen {
 }
 
 a {
-    text-decoration: none;
-    color: black;
+    text-decoration: underline;
+    color: inherit;
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 #container {
@@ -61,15 +61,34 @@ iframe {
     background-color: #CECECE;
     z-index: 3;
 }
+#loader-mask {
+    z-index: 5;
+}
 #back {
     display: none;
     position: fixed;
     top: 32px;
     left: 32px;
-    color: #fff;
     z-index: 2;
 }
-body.isFullscreen #back {
+#info {
+    display: none;
+    position: fixed;
+    top: 32px;
+    right: 32px;
+    z-index: 2;
+}
+#info-container {
+    display: none;
+    position: fixed;
+    top: 72px;
+    right: 32px;
+    width: 50%;
+    text-align: right;
+    z-index: 2;
+}
+body.isFullscreen #back,
+body.isFullscreen #info {
     display: block;
 }
 
@@ -137,4 +156,67 @@ ul li a img {
     width: 100%;
     height: auto;
     border: 0;
+}
+
+/* loader credits to http://tobiasahlin.com/spinkit/ */
+#spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 60px;
+    margin-left: -50px;
+    margin-top: -30px;
+    text-align: center;
+    font-size: 10px;
+    z-index: 5;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    pointer-events: none;
+}
+
+#spinner > div {
+    background-color: #333;
+    height: 100%;
+    width: 6px;
+    display: inline-block;
+    -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+    animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+#spinner .rect2 {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
+}
+
+#spinner .rect3 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+#spinner .rect4 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+}
+
+#spinner .rect5 {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+    0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
+    20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes sk-stretchdelay {
+    0%, 40%, 100% {
+        transform: scaleY(0.4);
+        -webkit-transform: scaleY(0.4);
+    }  20% {
+        transform: scaleY(1.0);
+        -webkit-transform: scaleY(1.0);
+    }
 }
