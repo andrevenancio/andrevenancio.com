@@ -24,8 +24,8 @@ function init() {
     document.body.appendChild(renderer.domElement);
 
     controls = new THREE.OrbitControls(camera, renderer.domElement);
-    controls.minDistance = 1000
-    controls.maxDistance = 2000
+    controls.minDistance = 100
+    controls.maxDistance = 3000
     controls.enablePan = true
     controls.enableKeys = true
     controls.minPolarAngle = 10*Math.PI/180
