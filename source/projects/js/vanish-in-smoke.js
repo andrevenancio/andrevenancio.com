@@ -7,7 +7,7 @@ function init() {
     renderer = new ShaderToy();
     renderer.setSize(window.innerWidth, window.innerHeight);
 
-    renderer.loadFragment('/experiments/shaders/3.frag');
+    renderer.loadFragment('/projects/shaders/vanish-in-smoke.frag');
     renderer.loadImage('/img/noise64.png', 0);
     renderer.loadImage('/img/loremipsum.png', 1);
 

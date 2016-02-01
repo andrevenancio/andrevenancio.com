@@ -1,4 +1,4 @@
-html, body{
+html, body {
     width: 100%;
     height: 100%;
     padding: 0;
@@ -18,9 +18,12 @@ canvas {
 h1 {
     color: black;
     font-size: 20px;
-    margin-top: 32/. px;
+    margin-top: 32px;
 }
-
+#container {
+    width: 100%;
+    padding: 0 100px 100px 100px;
+}
 #container iframe {
     position: relative;
     width: 100%;
@@ -29,24 +32,18 @@ h1 {
 
 @media screen and (max-width: 1024px) {
     #container iframe {
-        position: relative;
-        width: 100%;
         height: 480px;
     }
 }
 
 @media screen and (max-width: 768px) {
     #container iframe {
-        position: relative;
-        width: 100%;
         height: 320px;
     }
 }
 
 @media screen and (max-width: 512px) {
     #container iframe {
-        position: relative;
-        width: 100%;
         height: 160px;
     }
 }

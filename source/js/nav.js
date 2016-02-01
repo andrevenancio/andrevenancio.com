@@ -123,11 +123,6 @@ Application.prototype = {
             str += '<strong>Info</strong>';
             str += '<br>';
             str += this.dataChunk.info;
-            str += '<br>';
-            str += '<br>';
-            str += '<strong>Technology</strong>';
-            str += '<br>';
-            str += this.dataChunk.technology.join(', ');
             this.cont.innerHTML = str;
         }
         this.back.style.color = this.info.style.color = this.cont.style.color = this.dataChunk.theme === 'light' ? '#fff' : '#000';
@@ -193,8 +188,17 @@ Application.prototype = {
 
         var el = e.target;
         e.preventDefault();
+        for (var i = 0; i < this.tags.children.length; i++) {
+            this.tags.children[i].children[0].classList.remove('selected');
+        }
+
+        for (var i = 0; i < this.tech.children.length; i++) {
+            this.tech.children[i].children[0].classList.remove('selected');
+        }
 
         if (el.nodeName === 'A') {
+
+            el.classList.add('selected');
 
             var sorter = el.getAttribute('href');
 
@@ -294,7 +298,7 @@ Application.prototype = {
 
                 this.iframe = document.createElement('iframe');
                 this.iframe.addEventListener('load', this.onIframeLoad.bind(this));
-                this.iframe.src = '/experiments/' + state.url.split('/')[2] + '.html';
+                this.iframe.src = '/projects/' + state.url.split('/')[2] + '.html';
                 document.body.appendChild(this.iframe);
 
                 // update info or hide it

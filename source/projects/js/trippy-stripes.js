@@ -7,7 +7,7 @@ function init() {
     renderer = new ShaderToy();
     renderer.setSize(window.innerWidth, window.innerHeight);
 
-    renderer.loadFragment('/experiments/shaders/2.frag');
+    renderer.loadFragment('/projects/shaders/trippy-stripes.frag');
     renderer.loadImage('/img/noise.png');
 
     window.addEventListener('resize', resize.bind(this));

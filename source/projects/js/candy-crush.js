@@ -7,7 +7,7 @@ function init() {
     renderer = new ShaderToy();
     renderer.setSize(window.innerWidth, window.innerHeight);
 
-    renderer.loadFragment('/experiments/shaders/1.frag');
+    renderer.loadFragment('/projects/shaders/candy-crush.frag');
 
     window.addEventListener('resize', resize.bind(this));
 
