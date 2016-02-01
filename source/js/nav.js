@@ -5,9 +5,9 @@ var Application = function() {
             url: '/'
         }
     };
-
+    this.dataChunk = {}
+    this.data = []
     this.dataAll = [];
-    this.dataSort = [];
 
     this.tags = document.getElementById('tags');
     this.tech = document.getElementById('tech');
@@ -48,19 +48,21 @@ Application.prototype = {
     },
 
     build: function(data) {
+        this.data = data;
+
         // delete all
         this.labs.innerHTML = '';
         window.scrollTo(0, 0);
 
         // add new
-        for (var i = 0; i < data.length; i++) {
+        for (var i = 0; i < this.data.length; i++) {
             var li = document.createElement('li');
 
             var a = document.createElement('a');
-            a.href = data[i].url;
+            a.href = this.data[i].url;
 
             var img = document.createElement('img');
-            img.src = data[i].thumb;
+            img.src = this.data[i].thumb;
 
             a.appendChild(img);
             li.appendChild(a);
@@ -108,9 +110,28 @@ Application.prototype = {
     },
 
     onIframeLoad: function(e) {
-
+        this.info.style.display = 'block';
+        if (this.dataChunk.info === '') {
+            this.info.style.display = 'none';
+        } else {
+            var str = '';
+            str += '<strong>Date</strong>';
+            str += '<br>';
+            str += this.dataChunk.date;
+            str += '<br>';
+            str += '<br>';
+            str += '<strong>Info</strong>';
+            str += '<br>';
+            str += this.dataChunk.info;
+            str += '<br>';
+            str += '<br>';
+            str += '<strong>Technology</strong>';
+            str += '<br>';
+            str += this.dataChunk.technology.join(', ');
+            this.cont.innerHTML = str;
+        }
+        this.back.style.color = this.info.style.color = this.cont.style.color = this.dataChunk.theme === 'light' ? '#fff' : '#000';
         this.show();
-        this.back.style.color = this.info.style.color = this.cont.style.color = this.iframe.contentWindow.theme === 'light' ? '#fff' : '#000';
         this.iframe.contentWindow.addEventListener('contextmenu', this.handleContext.bind(this));
 
     },
@@ -200,8 +221,6 @@ Application.prototype = {
         this.hasInfo = !this.hasInfo;
         this.toggleInfo(this.hasInfo);
 
-        this.cont.innerHTML = this.iframe.contentWindow.info || '';
-
     },
 
     toggleInfo: function(toActive) {
@@ -266,6 +285,7 @@ Application.prototype = {
 
                 }
 
+                this.dataChunk = {};
                 this.iframe = null;
                 this.show();
 
@@ -277,6 +297,12 @@ Application.prototype = {
                 this.iframe.src = '/experiments/' + state.url.split('/')[2] + '.html';
                 document.body.appendChild(this.iframe);
 
+                // update info or hide it
+                for (var i = 0; i < this.data.length; i++) {
+                    if (state.url === this.data[i].url) {
+                        this.dataChunk = this.data[i];
+                    }
+                }
             }
 
         }.bind(this));

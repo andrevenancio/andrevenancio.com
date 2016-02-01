@@ -35,18 +35,6 @@ function init() {
 
     addElements();
 
-    window.theme = 'light';
-    window.info = [
-        '<strong>Date</strong>',
-        '19.01.2016',
-        '',
-        '<strong>Info</strong>',
-        'Flat Ocean is a study on THREE.ShaderMaterial. It includes fog, lights and uses standard derivatives to calculate per face lighting (kind of).',
-        '',
-        '<strong>Technology</strong>',
-        'WebGL, <a href="http://threejs.org/" target="_blank">Three.js</a></strong>',
-    ].join('<br>');
-
     resize();
     update();
 

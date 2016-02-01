@@ -6,10 +6,11 @@
             "url": "/lab/1",
             "thumb": "/thumbnails/1.png",
             "info": "If you're into WebGL and GLSL, by now you should have heard of ShaderToy. This is a copy of their fragment shader example. Running on a small WebGL library I've build to emulate it. Why?... Why now?!",
+            "theme": "",
             "technology": [
                 "webgl",
                 "lab",
-                "shadertoyjs"
+                "shadertoy.js"
             ]
         },
 
@@ -19,10 +20,11 @@
             "url": "/lab/2",
             "thumb": "/thumbnails/2.png",
             "info": "Experimenting with uv offsets on a noise texture.",
+            "theme": "light",
             "technology": [
                 "webgl",
                 "lab",
-                "shadertoyjs"
+                "shadertoy.js"
             ]
         },
 
@@ -32,10 +34,11 @@
             "url": "/lab/3",
             "thumb": "/thumbnails/3.png",
             "info": "This was a quick test for a text transition using a noise texture.",
+            "theme": "light",
             "technology": [
                 "webgl",
                 "lab",
-                "shadertoyjs"
+                "shadertoy.js"
             ]
         },
 
@@ -45,10 +48,11 @@
             "url": "/lab/4",
             "thumb": "/thumbnails/4.png",
             "info": "This was the result of two problems I tried to fix for a commercial project. First, I'm drawing a gradient with 4 distinct colours, and secondly I'm adding another gradient with transparency and variable height on top of it.",
+            "theme": "",
             "technology": [
                 "webgl",
                 "lab",
-                "shadertoyjs"
+                "shadertoy.js"
             ]
         },
 
@@ -58,10 +62,11 @@
             "url": "/lab/5",
             "thumb": "/thumbnails/5.png",
             "info": "Flat Ocean is a study on THREE.ShaderMaterial. It includes fog, lights and uses standard derivatives to calculate per face lighting (kind of).",
+            "theme": "light",
             "technology": [
                 "webgl",
                 "lab",
-                "threejs"
+                "three.js"
             ]
         },
         {
@@ -70,10 +75,27 @@
             "url": "/lab/6",
             "thumb": "/thumbnails/6.png",
             "info": "Mountain generator is another study on THREE.ShaderMaterial.",
+            "theme": "light",
             "technology": [
                 "webgl",
                 "lab",
-                "threejs"
+                "three.js"
+            ]
+        },
+
+        {
+            "title": "Blackmores Wellbeing Check",
+            "date": "01.01.2016",
+            "url": "/work/blackmores-wellbeing-check",
+            "thumb": "/thumbnails/blackmores-wellbeing-check.png",
+            "info": "",
+            "theme": "",
+            "technology": [
+                "webgl",
+                "work",
+                "three.js",
+                "pixi.js",
+                "box2d"
             ]
         }
     ]

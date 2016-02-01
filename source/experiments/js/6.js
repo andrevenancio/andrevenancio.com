@@ -42,18 +42,6 @@ function init() {
 
     addElements();
 
-    window.theme = 'light';
-    window.info = [
-        '<strong>Date</strong>',
-        '19.01.2016',
-        '',
-        '<strong>Info</strong>',
-        'Mountain generator is another study on THREE.ShaderMaterial',
-        '',
-        '<strong>Technology</strong>',
-        'WebGL, <a href="http://threejs.org/" target="_blank">Three.js</a></strong>',
-    ].join('<br>');
-
     resize();
     update();
 

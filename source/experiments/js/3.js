@@ -13,21 +13,6 @@ function init() {
 
     window.addEventListener('resize', resize.bind(this));
 
-    window.theme = 'light';
-    window.info = [
-        '<strong>Date</strong>',
-        '24.11.2015',
-        '',
-        '<strong>Info</strong>',
-        'This was a quick test for a text transition using a noise texture.',
-        '',
-        '<strong>Technology</strong>',
-        'WebGL, <a href="https://github.com/LowwwLtd/shadertoy.js" target="_blank">shadertoy.js</a></strong>',
-        '',
-        '<strong>Download</strong>',
-        '<a href="/experiments/shaders/3.frag" target="_blank">3.frag</a>',
-    ].join('<br>');
-
     resize();
     update();
 
