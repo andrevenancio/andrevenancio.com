@@ -115,6 +115,18 @@
         },
 
         {
+            "title": "Google Les Heures Magiques",
+            "date": "01.01.2015",
+            "url": "/work/google-les-heures-magiques",
+            "thumb": "/thumbnails/google-les-heures-magiques.png",
+            "info": "",
+            "theme": "",
+            "technology": [
+                "work"
+            ]
+        },
+
+        {
             "title": "Starbucks Community Board",
             "date": "01.11.2014",
             "url": "/work/starbucks-community-board",

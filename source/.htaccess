@@ -2,3 +2,5 @@ RewriteEngine On
 
 RewriteRule ^lab$ ./index.html
 RewriteRule ^lab/(.*) ./index.html
+RewriteRule ^work$ ./index.html
+RewriteRule ^work/(.*) ./index.html
