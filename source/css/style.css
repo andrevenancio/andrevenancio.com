@@ -120,17 +120,21 @@ ul {
     padding: 0;
     list-style-type: none;
 }
-#tags {
+#tags, #tech {
     display: block;
     float: left;
     width: 100%;
 }
 
-#tags li {
+#tags li, #tech li {
     position: relative;
     display: block;
     float: left;
     padding: 8px
+}
+#tech li {
+    font-size: 10px;
+    padding: 4px;
 }
 
 #labs li {

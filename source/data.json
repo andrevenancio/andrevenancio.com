@@ -1,0 +1,80 @@
+{
+    "all": [
+        {
+            "title": "shadertoy.js basic demo",
+            "date": "22.11.2015",
+            "url": "/lab/1",
+            "thumb": "/thumbnails/1.png",
+            "info": "If you're into WebGL and GLSL, by now you should have heard of ShaderToy. This is a copy of their fragment shader example. Running on a small WebGL library I've build to emulate it. Why?... Why now?!",
+            "technology": [
+                "webgl",
+                "lab",
+                "shadertoyjs"
+            ]
+        },
+
+        {
+            "title": "Trippy Stripes",
+            "date": "22.11.2015",
+            "url": "/lab/2",
+            "thumb": "/thumbnails/2.png",
+            "info": "Experimenting with uv offsets on a noise texture.",
+            "technology": [
+                "webgl",
+                "lab",
+                "shadertoyjs"
+            ]
+        },
+
+        {
+            "title": "Vanish in smoke",
+            "date": "24.11.2015",
+            "url": "/lab/3",
+            "thumb": "/thumbnails/3.png",
+            "info": "This was a quick test for a text transition using a noise texture.",
+            "technology": [
+                "webgl",
+                "lab",
+                "shadertoyjs"
+            ]
+        },
+
+        {
+            "title": "Candy Crush",
+            "date": "12.01.2016",
+            "url": "/lab/4",
+            "thumb": "/thumbnails/4.png",
+            "info": "This was the result of two problems I tried to fix for a commercial project. First, I'm drawing a gradient with 4 distinct colours, and secondly I'm adding another gradient with transparency and variable height on top of it.",
+            "technology": [
+                "webgl",
+                "lab",
+                "shadertoyjs"
+            ]
+        },
+
+        {
+            "title": "Flat Ocean",
+            "date": "19.01.2016",
+            "url": "/lab/5",
+            "thumb": "/thumbnails/5.png",
+            "info": "Flat Ocean is a study on THREE.ShaderMaterial. It includes fog, lights and uses standard derivatives to calculate per face lighting (kind of).",
+            "technology": [
+                "webgl",
+                "lab",
+                "threejs"
+            ]
+        },
+        {
+            "title": "Mountain Generator",
+            "date": "19.01.2016",
+            "url": "/lab/6",
+            "thumb": "/thumbnails/6.png",
+            "info": "Mountain generator is another study on THREE.ShaderMaterial.",
+            "technology": [
+                "webgl",
+                "lab",
+                "threejs"
+            ]
+        }
+    ]
+}

@@ -1,10 +1,16 @@
-var Application = function () {
+var Application = function() {
 
     this.historyState = {
         '': {
             url: '/'
         }
     };
+
+    this.dataAll = [];
+    this.dataSort = [];
+
+    this.tags = document.getElementById('tags');
+    this.tech = document.getElementById('tech');
 
     this.labs = document.getElementById('labs');
     this.mask = document.getElementById('mask');
@@ -15,7 +21,7 @@ var Application = function () {
 
     this.hasInfo = false;
 
-    this.init();
+    this.load('/data.json', this.init.bind(this));
 
 };
 
@@ -23,8 +29,56 @@ Application.prototype = {
 
     constructor: Application.constructor,
 
-    init: function () {
+    load: function(path, success) {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    if (success) {
+                        success(JSON.parse(xhr.responseText).all);
+                    }
+                } else {
+                    console.error(xhr);
+                }
+            }
+        };
 
+        xhr.open('GET', path, true);
+        xhr.send();
+    },
+
+    build: function(data) {
+        // delete all
+        this.labs.innerHTML = '';
+        window.scrollTo(0, 0);
+
+        // add new
+        for (var i = 0; i < data.length; i++) {
+            var li = document.createElement('li');
+
+            var a = document.createElement('a');
+            a.href = data[i].url;
+
+            var img = document.createElement('img');
+            img.src = data[i].thumb;
+
+            a.appendChild(img);
+            li.appendChild(a);
+            this.labs.appendChild(li);
+        }
+
+    },
+
+    init: function(data) {
+
+        this.dataAll = data;
+        this.build(data);
+
+        // sort
+        this.tags.addEventListener('click', this.handleTags.bind(this));
+        this.tech.addEventListener('click', this.handleTags.bind(this));
+
+        // click
         this.labs.addEventListener('click', this.handleClick.bind(this));
         this.back.addEventListener('click', this.handleClick.bind(this));
         this.info.addEventListener('click', this.showInfo.bind(this));
@@ -53,7 +107,7 @@ Application.prototype = {
 
     },
 
-    onIframeLoad: function (e) {
+    onIframeLoad: function(e) {
 
         this.show();
         this.back.style.color = this.info.style.color = this.cont.style.color = this.iframe.contentWindow.theme === 'light' ? '#fff' : '#000';
@@ -61,7 +115,7 @@ Application.prototype = {
 
     },
 
-    handlePopstate: function (event) {
+    handlePopstate: function(event) {
 
         var hs = history.state;
 
@@ -92,7 +146,7 @@ Application.prototype = {
 
     },
 
-    handleClick: function (e) {
+    handleClick: function(e) {
 
         var el = e.target;
         e.preventDefault();
@@ -112,6 +166,32 @@ Application.prototype = {
 
         }
 
+    },
+
+    handleTags: function(e) {
+
+        var el = e.target;
+        e.preventDefault();
+
+        if (el.nodeName === 'A') {
+
+            var sorter = el.getAttribute('href');
+
+            if (sorter === 'all') {
+                this.build(this.dataAll);
+                return
+            } else {
+                var temp = []
+                for (var i = 0; i < this.dataAll.length; i++) {
+                    for (var j = 0; j < this.dataAll[i].technology.length; j++) {
+                        if (this.dataAll[i].technology[j] === sorter) {
+                            temp.push(this.dataAll[i]);
+                        }
+                    }
+                }
+                this.build(temp);
+            }
+        }
     },
 
     showInfo: function(e) {
@@ -140,7 +220,7 @@ Application.prototype = {
 
     },
 
-    hide: function (callback) {
+    hide: function(callback) {
 
         if (this.iframe === undefined) {
 
@@ -156,7 +236,7 @@ Application.prototype = {
 
     },
 
-    show: function (callback) {
+    show: function(callback) {
 
         this.spin.style.opacity = 0;
 
@@ -168,9 +248,9 @@ Application.prototype = {
 
     },
 
-    navigate: function (state) {
+    navigate: function(state) {
 
-        this.hide(function () {
+        this.hide(function() {
 
             if (state.url === '/') {
                 document.body.className = '';
