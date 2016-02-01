@@ -85,7 +85,7 @@
 
         {
             "title": "Blackmores Wellbeing Check",
-            "date": "01.01.2016",
+            "date": "11.01.2016",
             "url": "/work/blackmores-wellbeing-check",
             "thumb": "/thumbnails/blackmores-wellbeing-check.png",
             "info": "",
@@ -96,6 +96,91 @@
                 "three.js",
                 "pixi.js",
                 "box2d"
+            ]
+        },
+
+        {
+            "title": "Blackmores Mindful Ocean",
+            "date": "01.12.2015",
+            "url": "/work/blackmores-mindful-ocean",
+            "thumb": "/thumbnails/blackmores-mindful-ocean.png",
+            "info": "",
+            "theme": "",
+            "technology": [
+                "webgl",
+                "work",
+                "three.js",
+                "installation"
+            ]
+        },
+
+        {
+            "title": "Starbucks Community Board",
+            "date": "01.11.2014",
+            "url": "/work/starbucks-community-board",
+            "thumb": "/thumbnails/starbucks-community-board.png",
+            "info": "",
+            "theme": "",
+            "technology": [
+                "webgl",
+                "work",
+                "three.js",
+                "installation"
+            ]
+        },
+
+        {
+            "title": "Wringley Experience 5Gum",
+            "date": "31.07.2014",
+            "url": "/work/wringley-experience-5gum",
+            "thumb": "/thumbnails/wringley-experience-5gum.png",
+            "info": "",
+            "theme": "",
+            "technology": [
+                "work",
+                "kinect",
+                "oculus rift",
+                "installation"
+            ]
+        },
+
+        {
+            "title": "McDonalds Great Tastes of America",
+            "date": "21.06.2014",
+            "url": "/work/mcdonalds-gta",
+            "thumb": "/thumbnails/mcdonalds-gta.png",
+            "info": "",
+            "theme": "",
+            "technology": [
+                "work",
+                "pixi.js"
+            ]
+        },
+
+        {
+            "title": "Google Hangout Comedy Club",
+            "date": "01.01.2013",
+            "url": "/work/google-hangout-comedy-club",
+            "thumb": "/thumbnails/google-hangout-comedy-club.png",
+            "info": "",
+            "theme": "",
+            "technology": [
+                "work",
+                "canvas"
+            ]
+        },
+
+        {
+            "title": "Toyota Prius Plug-in Hybrid",
+            "date": "01.01.2012",
+            "url": "/work/toyota-prius-plugin-hybrid",
+            "thumb": "/thumbnails/toyota-prius-plugin-hybrid.png",
+            "info": "",
+            "theme": "",
+            "technology": [
+                "work",
+                "canvas",
+                "webgl"
             ]
         }
     ]
