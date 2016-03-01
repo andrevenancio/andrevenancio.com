@@ -1,6 +1,20 @@
 {
     "all": [
         {
+            "title": "Kickjs template",
+            "date": "01.03.2016",
+            "url": "/lab/kickjs-template",
+            "thumb": "/thumbnails/kickjs-template.png",
+            "info": "kickjs is an npm module to quickly start prototyping without having to write the whole boilerplate code you need to before seeing something on screen. It's ment to be a quick way to share ideas, or experiments.",
+            "theme": "",
+            "technology": [
+                "lab",
+                "webgl",
+                "kickjs"
+            ]
+        },
+
+        {
             "title": "Shadertoy Basic Demo",
             "date": "22.11.2015",
             "url": "/lab/shadertoy-basic-demo",
