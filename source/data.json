@@ -6,7 +6,7 @@
             "url": "/lab/kickjs-template",
             "thumb": "/thumbnails/kickjs-template.png",
             "info": "kickjs is an npm module to quickly start prototyping without having to write the whole boilerplate code you need to before seeing something on screen. It's ment to be a quick way to share ideas, or experiments.",
-            "theme": "",
+            "theme": "light",
             "technology": [
                 "lab",
                 "webgl",
