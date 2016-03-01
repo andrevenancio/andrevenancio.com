@@ -291,6 +291,7 @@ Application.prototype = {
 
                 this.dataChunk = {};
                 this.iframe = null;
+                this.info.style.display = 'none';
                 this.show();
 
             } else {
