@@ -1,6 +1,19 @@
 {
     "all": [
         {
+            "title": "LOD Grid",
+            "date": "08.03.2016",
+            "url": "/lab/lod-grid",
+            "thumb": "/thumbnails/lod-grid.png",
+            "info": "LOD (Level of Detail), is a study done in threejs where I'm generating an infinite grid and changing the level of detail of the tiles based on a distance to a 'player'. Use keys AWSD to move around.",
+            "theme": "light",
+            "technology": [
+                "lab",
+                "webgl",
+                "threejs"
+            ]
+        },
+        {
             "title": "Kickjs template",
             "date": "01.03.2016",
             "url": "/lab/kickjs-template",

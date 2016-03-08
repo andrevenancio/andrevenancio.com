@@ -128,6 +128,7 @@ Application.prototype = {
         this.back.style.color = this.info.style.color = this.cont.style.color = this.dataChunk.theme === 'light' ? '#fff' : '#000';
         this.show();
         this.iframe.contentWindow.addEventListener('contextmenu', this.handleContext.bind(this));
+        this.iframe.focus();
 
     },
 
@@ -239,6 +240,9 @@ Application.prototype = {
             this.info.innerHTML = 'info';
             this.cont.style.display = 'none';
 
+        }
+        if (this.iframe) {
+            this.iframe.focus();
         }
 
     },
