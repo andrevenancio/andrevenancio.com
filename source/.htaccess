@@ -1,5 +1,8 @@
 RewriteEngine On
 
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
 RewriteRule ^lab$ ./index.html
 RewriteRule ^lab/(.*) ./index.html
 RewriteRule ^work$ ./index.html
